@@ -3,7 +3,7 @@ async function generateSidebar() {
     if (!sidebar) return;
     
     try {
-        const response = await fetch('/directory-listing.json');
+        const response = await fetch('https://pauwdah.github.io/directory-listing.json');
         if (!response.ok) throw new Error('Directory listing not found');
         
         const structure = await response.json();
