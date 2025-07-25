@@ -1,4 +1,4 @@
- :root {
+:root {
             --primary-color: #2563eb;
             --secondary-color: #64748b;
             --background: #ffffff;
@@ -128,7 +128,7 @@
             transition: all 0.3s ease;
         }
 
-        .file-list a:hover {
+        .file-list a:hover, .file-list a.active {
             background: var(--primary-color);
             color: white;
             transform: translateX(4px);
@@ -140,6 +140,144 @@
             padding: 2.5rem;
             border: 1px solid var(--border);
             box-shadow: var(--shadow);
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            color: var(--text-secondary);
+        }
+
+        .spinner {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--border);
+            border-top: 2px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .markdown-content h1 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .markdown-content h2 {
+            color: var(--text-primary);
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .markdown-content h3, .markdown-content h4, .markdown-content h5, .markdown-content h6 {
+            color: var(--text-primary);
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .markdown-content p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .markdown-content ul, .markdown-content ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        .markdown-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-content blockquote {
+            border-left: 4px solid var(--primary-color);
+            margin: 1rem 0;
+            padding: 1rem 1.5rem;
+            background: var(--background);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .markdown-content pre {
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .markdown-content code {
+            background: var(--background);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-content pre code {
+            background: none;
+            padding: 0;
+            border: none;
+        }
+
+        .markdown-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--background);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .markdown-content th, .markdown-content td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .markdown-content th {
+            background: var(--surface);
+            font-weight: 600;
+        }
+
+        .markdown-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .markdown-content a:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            color: #ef4444;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .breadcrumb {
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
