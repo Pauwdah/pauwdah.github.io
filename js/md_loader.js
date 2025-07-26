@@ -13,7 +13,6 @@ function get_title_names() {
     note_name = note_name.replace('_', ' ');
     note_name = nominizeString(note_name)
     
-
     return [category_name, note_name] 
 }
 
