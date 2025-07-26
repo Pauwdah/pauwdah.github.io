@@ -133,6 +133,12 @@
             color: white;
             transform: translateX(4px);
         }
+        .md-head{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        }
+        
 
         .main-content {
             background: var(--surface);
